@@ -11,26 +11,35 @@
 
 //
 
+//
+// var a=[1,2,3,4,5,6];
+// //var s = a.slice();
+// //var s = a.splice(1,1,"Hello");//[ 1, 'Hello', 4, 5, 6 ]
+// var s = a.indexOf(5);//4
+//
+//
+// console.log(s);
+var a=[],
+    number=0;
 
-var num,
-    a= [],
-    sum=0;
-
-for(;;){
-
-}
-
-for(var i=1;i<=500;i++){
-    if(i%num == 0){
-        a.push(i);
+do{
+    number = prompt("Number:");
+    if(number != "q"){
+        a.push(parseInt(number));
+    }else{
+        alert("Done");
+        break;
     }
-}
-for(var j=0; j<= a.length-1; j++){
-    sum+= a[j];
-}
+}while(true);
 
-for(var k=0; k <=a.length-1;k++){
-    console.log(a[k]);
-}
+alert(a);
+console.log(a);
 
-console.log("Summa = "+sum);
+var start = +prompt("What to change");
+var changeTo = +prompt("change to...");
+var index = a.indexOf(start);
+
+console.log("Index "+index);
+var res = a.splice(index,1,changeTo);
+
+console.log(a);
