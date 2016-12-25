@@ -70,39 +70,54 @@
 
 var FirmName,
     ModelName,
-    EngineDisplacement=0;
+    EngineDisplacement=0,
+    allCars=[],
+    currentCar={};
 
-do{
-    FirmName = prompt("Enter Firm Name");
-    if(FirmName.length === 0){
-        alert("Firm Name cant be empty");
-        continue;
-    }else{
-        console.log(FirmName);
-        break;
-    }
-}while(true);
-do{
-    ModelName= prompt("Enter Model Name");
-    if(ModelName.length===0){
-        alert("Model Name cant be empty");
-        continue;
-    }else{
-        console.log(ModelName);
-        break;
-    }
-}while(true);
-do{
-    EngineDisplacement = prompt("enter Engine Displacement");
 
-    if(EngineDisplacement.length === 0){
-        alert("Engine Displacement cant be empty");
-        continue;
-    }else if(isNaN(EngineDisplacement)){
-        alert("Engine Displacement must be number");
-        continue;
-    }else{
-        console.log(EngineDisplacement);
-        break;
-    }
-}while(true);
+
+for(var i=1;i<=5;i++){
+    do{
+        FirmName = prompt("Enter Firm Name");
+        if(FirmName.length === 0){
+            alert("Firm Name cant be empty");
+            continue;
+        }else{
+            console.log(FirmName);
+            break;
+        }
+    }while(true);
+    do{
+        ModelName= prompt("Enter Model Name");
+        if(ModelName.length===0){
+            alert("Model Name cant be empty");
+            continue;
+        }else{
+            console.log(ModelName);
+            break;
+        }
+    }while(true);
+    do{
+        EngineDisplacement = prompt("enter Engine Displacement");
+
+        if(EngineDisplacement.length === 0){
+            alert("Engine Displacement cant be empty");
+            continue;
+        }else if(isNaN(EngineDisplacement)){
+            alert("Engine Displacement must be number");
+            continue;
+        }else{
+            console.log(EngineDisplacement);
+            break;
+        }
+    }while(true);
+
+    currentCar = {
+        "Firm":FirmName,
+        "Model":ModelName,
+        "Engine":EngineDisplacement
+    };
+
+    allCars.push(currentCar);
+}
+console.log(allCars);
