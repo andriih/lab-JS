@@ -85,7 +85,10 @@ for(var i=1;i<=5;i++){
         }else if(FirmName.length === 0){
             alert("Firm Name cant be empty");
             continue;
-        }else{
+        }else if(FirmName == "q"){
+            break;
+        }
+        else{
             console.log(FirmName);
             break;
         }
@@ -98,6 +101,8 @@ for(var i=1;i<=5;i++){
         }else if(ModelName.length===0){
             alert("Model Name cant be empty");
             continue;
+        }else if(FirmName == "q"){
+            break;
         }else{
             console.log(ModelName);
             break;
@@ -112,7 +117,7 @@ for(var i=1;i<=5;i++){
         }else if(isNaN(EngineDisplacement)){
             alert("Engine Displacement must be number");
             continue;
-        }else{
+        }else {
             console.log(EngineDisplacement);
             break;
         }
@@ -129,4 +134,5 @@ for(var j=0;j<=allCars.length-1;j++){
         console.log("2.0 < "+allCars[j]["Engine"]);
     }
 }
-console.log("All cars "+allCars);
+
+console.log(allCars);
