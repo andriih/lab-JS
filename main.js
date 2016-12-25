@@ -55,15 +55,54 @@
 //var res = a.sort();
 
 
-var a =[];
-var car = {};
-for(var i=1; i<=5; i++ ){
-    var label  = prompt("Choose your car");
-    car = {
-        model: label,
-    }
-    a.push(car);
-    console.log(car);
-}
+// var a =[];
+// var car = {};
+// for(var i=1; i<=5; i++ ){
+//     var label  = prompt("Choose your car");
+//     car = {
+//         model: label,
+//     }
+//     a.push(car);
+//     console.log(car);
+// }
+//
+// console.log(a);
 
-console.log(a);
+var FirmName,
+    ModelName,
+    EngineDisplacement=0;
+
+do{
+    FirmName = prompt("Enter Firm Name");
+    if(FirmName.length === 0){
+        alert("Firm Name cant be empty");
+        continue;
+    }else{
+        console.log(FirmName);
+        break;
+    }
+}while(true);
+do{
+    ModelName= prompt("Enter Model Name");
+    if(ModelName.length===0){
+        alert("Model Name cant be empty");
+        continue;
+    }else{
+        console.log(ModelName);
+        break;
+    }
+}while(true);
+do{
+    EngineDisplacement = prompt("enter Engine Displacement");
+
+    if(EngineDisplacement.length === 0){
+        alert("Engine Displacement cant be empty");
+        continue;
+    }else if(isNaN(EngineDisplacement)){
+        alert("Engine Displacement must be number");
+        continue;
+    }else{
+        console.log(EngineDisplacement);
+        break;
+    }
+}while(true);
