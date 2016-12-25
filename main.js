@@ -79,7 +79,10 @@ var FirmName,
 for(var i=1;i<=5;i++){
     do{
         FirmName = prompt("Enter Firm Name");
-        if(FirmName.length === 0){
+        if(!isNaN(FirmName)){
+            alert("Must be String Value");
+            continue;
+        }else if(FirmName.length === 0){
             alert("Firm Name cant be empty");
             continue;
         }else{
@@ -89,7 +92,10 @@ for(var i=1;i<=5;i++){
     }while(true);
     do{
         ModelName= prompt("Enter Model Name");
-        if(ModelName.length===0){
+        if(!isNaN(FirmName)){
+            alert("Must be String Value");
+            continue;
+        }else if(ModelName.length===0){
             alert("Model Name cant be empty");
             continue;
         }else{
@@ -111,13 +117,16 @@ for(var i=1;i<=5;i++){
             break;
         }
     }while(true);
-
     currentCar = {
         "Firm":FirmName,
         "Model":ModelName,
         "Engine":EngineDisplacement
     };
-
     allCars.push(currentCar);
 }
-console.log(allCars);
+for(var j=0;j<=allCars.length-1;j++){
+    if( allCars[j]["Engine"]>=2.0){
+        console.log("2.0 < "+allCars[j]["Engine"]);
+    }
+}
+console.log("All cars "+allCars);
